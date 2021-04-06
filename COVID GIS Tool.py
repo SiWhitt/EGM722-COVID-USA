@@ -1,8 +1,10 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
+import chartify as chartify
 import matplotlib.patches as mpatches
 import matplotlib.lines as mlines
+
 
 
 import pandas as pd
@@ -29,8 +31,9 @@ outline = outline.to_crs(epsg=4326)
 
 
 
+""" Load Excel spreadsheet containing US COVID Stats"""
 
-
+COVID_Data = 
 
 
 
@@ -54,4 +57,6 @@ ax.set_extent([xmin, xmax, ymin, ymax], crs=myCRS) # set the extent to the bound
 ax. set(title='USA - States plus Washington DC') # Apply Title to Map of Ireland with Towns
 
 myFig.savefig('map.png', bbox_inches='tight', dpi=300) #Save Map of USA as png file
+
+"""Use chartify to create COVID figures for USA"""
 
